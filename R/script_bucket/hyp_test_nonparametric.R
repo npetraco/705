@@ -5,5 +5,10 @@ B <- c(1.19, 0.97, 1.32, 1.79, 1.50, 1.34, 0.96, 1.29, 1.48,
 
 boxplot(A, B)
 
-t.test(samp1, samp2, alternative = "two.sided")
-wilcox.test(samp1, samp2, alternative = "two.sided")
+# Parametric Test:
+var.test(A, B, alternative = "two.sided")
+t.test(A, B, alternative = "two.sided", var.equal = F)
+
+# Non-parametric Test:
+wilcox.test(A, B, alternative = "two.sided")
+
